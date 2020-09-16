@@ -4,12 +4,12 @@ services:
   - docker
 
 before_install:
-  - docker build -t Sommysab/docker-react-frontend -f Dockerfile.dev .
+  - docker build -t frontend -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true Sommysab/docker-react-frontend npm run test
+  - docker run -e CI=true frontend npm run test
 
-# deploy:
+# deploy: Sommysab/docker-react-
 #   provider: elasticbeanstalk
 #   region: "us-west-2"
 #   app: "docker"

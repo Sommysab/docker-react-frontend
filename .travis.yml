@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t docker-react-frontend -f Dockerfile.dev .
+  - docker build -t Sommysab/docker-react-frontend -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true Sommysab/docker-react-frontend npm run test
